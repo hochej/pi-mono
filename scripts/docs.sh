@@ -9,6 +9,7 @@ DOCS="$ROOT/_docs"
 rm -rf "$DOCS"
 mkdir -p \
     "$DOCS/stylesheets" \
+    "$DOCS/images" \
     "$DOCS/coding-agent/images" \
     "$DOCS/libraries" \
     "$DOCS/mom" \
@@ -17,6 +18,7 @@ mkdir -p \
 # ── Hand-written docs assets ──
 cp "$ROOT/docs/index.md"                    "$DOCS/index.md"
 cp "$ROOT/docs/stylesheets/extra.css"       "$DOCS/stylesheets/extra.css"
+cp "$ROOT/docs/images/"*                    "$DOCS/images/"
 
 # ── Root-level docs ──
 cp "$ROOT/CONTRIBUTING.md"                  "$DOCS/contributing.md"
