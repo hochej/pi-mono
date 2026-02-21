@@ -1,0 +1,99 @@
+# Zensical configuration
+# Build: make docs | Serve: make serve-docs
+
+[project]
+site_name = "pi"
+docs_dir = "_docs"
+site_dir = "_site"
+
+extra_css = [
+    "stylesheets/extra.css",
+]
+
+repo_url = "https://github.com/badlogic/pi-mono"
+edit_uri = ""
+copyright = "MIT"
+
+nav = [
+    {"Home" = "index.md"},
+
+    {"Coding Agent" = [
+        {"Overview" = "coding-agent/overview.md"},
+        {"Providers" = "coding-agent/providers.md"},
+        {"Models" = "coding-agent/models.md"},
+        {"Custom Providers" = "coding-agent/custom-provider.md"},
+        {"Extensions" = "coding-agent/extensions.md"},
+        {"SDK" = "coding-agent/sdk.md"},
+        {"TUI Components" = "coding-agent/tui.md"},
+        {"Themes" = "coding-agent/themes.md"},
+        {"Skills" = "coding-agent/skills.md"},
+        {"Prompt Templates" = "coding-agent/prompt-templates.md"},
+        {"Packages" = "coding-agent/packages.md"},
+        {"Settings" = "coding-agent/settings.md"},
+        {"Sessions" = "coding-agent/session.md"},
+        {"Compaction" = "coding-agent/compaction.md"},
+        {"Keybindings" = "coding-agent/keybindings.md"},
+        {"RPC Protocol" = "coding-agent/rpc.md"},
+        {"JSON Mode" = "coding-agent/json.md"},
+        {"Shell Aliases" = "coding-agent/shell-aliases.md"},
+        {"Tree View" = "coding-agent/tree.md"},
+        {"Development" = "coding-agent/development.md"},
+        {"Terminal Setup" = "coding-agent/terminal-setup.md"},
+        {"Windows" = "coding-agent/windows.md"},
+        {"Termux" = "coding-agent/termux.md"},
+    ]},
+
+    {"Libraries" = [
+        {"pi-ai" = "libraries/ai.md"},
+        {"pi-agent-core" = "libraries/agent.md"},
+        {"pi-tui" = "libraries/tui.md"},
+        {"pi-web-ui" = "libraries/web-ui.md"},
+    ]},
+
+    {"Mom (Slack Bot)" = [
+        {"Overview" = "mom/overview.md"},
+        {"Slack Bot Guide" = "mom/slack-bot-minimal-guide.md"},
+        {"Sandbox" = "mom/sandbox.md"},
+        {"Events" = "mom/events.md"},
+        {"Artifacts Server" = "mom/artifacts-server.md"},
+        {"v86" = "mom/v86.md"},
+        {"New Architecture" = "mom/new.md"},
+    ]},
+
+    {"Pods (GPU)" = [
+        {"Overview" = "pods/overview.md"},
+        {"Models" = "pods/models.md"},
+        {"Implementation Plan" = "pods/plan.md"},
+        {"GPT OSS" = "pods/gpt-oss.md"},
+        {"Qwen3 Coder" = "pods/qwen3-coder.md"},
+        {"Kimi K2" = "pods/kimi-k2.md"},
+        {"GML 4.5" = "pods/gml-4.5.md"},
+    ]},
+
+    {"Contributing" = "contributing.md"},
+]
+
+[project.theme]
+font = false
+
+features = [
+    "content.code.copy",
+    "content.code.select",
+]
+
+[project.theme.icon]
+logo = "material/cube-outline"
+
+[[project.theme.palette]]
+# Dark mode (default — matches pi.dev)
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle = { icon = "material/weather-sunny", name = "Switch to light mode" }
+
+[[project.theme.palette]]
+# Light mode
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle = { icon = "material/weather-night", name = "Switch to dark mode" }

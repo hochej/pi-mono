@@ -1,0 +1,155 @@
+/* pi docs — theme adapted from shittycodingagent.ai
+ *
+ * Design tokens from the pi website:
+ *   bg:      #09090b   (zinc-950)
+ *   surface: #18181b   (zinc-900)
+ *   border:  #27272a   (zinc-800)
+ *   text:    #fafafa   (zinc-50)
+ *   dim:     #a1a1aa   (zinc-400)
+ *   accent:  #f97316   (orange-500)
+ */
+
+/* ── Fonts: system stack, no external loading ── */
+
+:root {
+    --md-text-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --md-code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+/* ── Dark mode (default — matches pi.dev) ── */
+
+[data-md-color-scheme="slate"] {
+    /* Backgrounds */
+    --md-default-bg-color: #09090b;
+    --md-default-bg-color--light: #18181b;
+    --md-default-bg-color--lighter: #27272a;
+    --md-default-bg-color--lightest: #3f3f46;
+
+    /* Text */
+    --md-default-fg-color: #fafafa;
+    --md-default-fg-color--light: #a1a1aa;
+    --md-default-fg-color--lighter: #71717a;
+    --md-default-fg-color--lightest: #52525b;
+
+    /* Primary / accent — orange from pi.dev */
+    --md-primary-fg-color: #18181b;
+    --md-primary-fg-color--light: #27272a;
+    --md-primary-fg-color--dark: #09090b;
+    --md-primary-bg-color: #fafafa;
+    --md-primary-bg-color--light: #a1a1aa;
+
+    --md-accent-fg-color: #f97316;
+    --md-accent-fg-color--transparent: rgba(249, 115, 22, 0.12);
+
+    /* Code */
+    --md-code-bg-color: #18181b;
+    --md-code-fg-color: #fafafa;
+    --md-code-hl-color: rgba(249, 115, 22, 0.15);
+
+    /* Typeset */
+    --md-typeset-a-color: #f97316;
+    --md-typeset-table-color: rgba(250, 250, 250, 0.08);
+    --md-typeset-table-color--light: rgba(250, 250, 250, 0.03);
+
+    /* Footer */
+    --md-footer-bg-color: #09090b;
+    --md-footer-bg-color--dark: #09090b;
+    --md-footer-fg-color: #a1a1aa;
+    --md-footer-fg-color--light: #71717a;
+    --md-footer-fg-color--lighter: #52525b;
+}
+
+/* ── Light mode ── */
+
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #fff;
+    --md-default-fg-color: rgba(28, 27, 26, 0.92);
+    --md-default-fg-color--light: rgba(28, 27, 26, 0.65);
+    --md-default-fg-color--lighter: rgba(28, 27, 26, 0.40);
+    --md-default-fg-color--lightest: rgba(28, 27, 26, 0.10);
+
+    --md-primary-fg-color: #fff;
+    --md-primary-fg-color--light: #fafafa;
+    --md-primary-fg-color--dark: #f5f5f5;
+    --md-primary-bg-color: rgba(28, 27, 26, 0.92);
+    --md-primary-bg-color--light: rgba(28, 27, 26, 0.65);
+
+    --md-accent-fg-color: #ea580c;
+    --md-accent-fg-color--transparent: rgba(234, 88, 12, 0.10);
+
+    --md-typeset-a-color: #ea580c;
+
+    --md-code-bg-color: #f5f5f5;
+
+    --md-footer-bg-color: #fafafa;
+    --md-footer-bg-color--dark: #f5f5f5;
+    --md-footer-fg-color: rgba(28, 27, 26, 0.65);
+    --md-footer-fg-color--light: rgba(28, 27, 26, 0.40);
+    --md-footer-fg-color--lighter: rgba(28, 27, 26, 0.20);
+}
+
+/* ── Typography ── */
+
+.md-typeset {
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.md-typeset code {
+    font-size: 0.85em;
+}
+
+.md-nav {
+    font-size: 0.72rem;
+}
+
+/* ── Links ── */
+
+.md-typeset a {
+    color: var(--md-typeset-a-color);
+    text-decoration: none;
+}
+
+.md-typeset a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+/* ── Header ── */
+
+.md-header {
+    background-color: var(--md-primary-fg-color);
+    border-bottom: 1px solid var(--md-default-bg-color--lighter);
+}
+
+/* ── Sidebar ── */
+
+.md-nav__link {
+    color: var(--md-default-fg-color--light);
+}
+
+.md-nav__link:hover,
+.md-nav__link--active {
+    color: var(--md-default-fg-color);
+}
+
+/* ── Code blocks ── */
+
+.md-typeset pre > code {
+    border-radius: 6px;
+}
+
+/* ── Tables ── */
+
+.md-typeset table:not([class]) {
+    font-size: 0.78rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+    font-weight: 600;
+}
